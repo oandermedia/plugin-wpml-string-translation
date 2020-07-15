@@ -139,7 +139,7 @@ class WPML_Package_Helper {
 
 			// Need to create a new record.
 			if ( $package->has_kind_and_name() ) {
-				$package_id = $this->create_new_package( $package );
+				$package_id = self::create_new_package( $package );
 				$package    = $this->package_factory->create( $package );
 			}
 		}
@@ -441,16 +441,16 @@ class WPML_Package_Helper {
 	/**
 	 * @param WPML_Package $package
 	 *
-	 * @return bool|mixed|null|string
+	 * @return int
 	 */
-	final private function create_new_package( $package ) {
+	final public static function create_new_package( WPML_Package $package ) {
 		$package_id = $package->create_new_package_record();
 
 		$tm = new WPML_Package_TM( $package );
 
 		$tm->update_package_translations( true );
 
-		return $package_id;
+		return (int) $package_id;
 	}
 
 	/**

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
+class ComposerStaticInita0f744b6b09496e229f24990c718fbee
 {
     public static $classMap = array (
         'IWPML_ST_Rewrite_Rule_Filter' => __DIR__ . '/../..' . '/classes/slug-translation/iwpml-st-rewrite-rule-filter.php',
@@ -13,6 +13,7 @@ class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
         'IWPML_St_Upgrade_Command' => __DIR__ . '/../..' . '/classes/upgrade/interface-iwpml_st_upgrade_command.php',
         'WPML\\ST\\Actions' => __DIR__ . '/../..' . '/classes/actions/Actions.php',
         'WPML\\ST\\Container\\Config' => __DIR__ . '/../..' . '/classes/container/Config.php',
+        'WPML\\ST\\DB\\Mappers\\DomainsRepository' => __DIR__ . '/../..' . '/classes/db-mappers/DomainsRepository.php',
         'WPML\\ST\\DB\\Mappers\\Hooks' => __DIR__ . '/../..' . '/classes/db-mappers/Hooks.php',
         'WPML\\ST\\DB\\Mappers\\StringsRetrieve' => __DIR__ . '/../..' . '/classes/db-mappers/StringsRetrieve.php',
         'WPML\\ST\\DB\\Mappers\\Update' => __DIR__ . '/../..' . '/classes/db-mappers/Update.php',
@@ -50,6 +51,7 @@ class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
         'WPML\\ST\\MO\\Hooks\\LoadMissingMOFiles' => __DIR__ . '/../..' . '/classes/MO/Hooks/LoadMissingMOFiles.php',
         'WPML\\ST\\MO\\Hooks\\LoadTextDomain' => __DIR__ . '/../..' . '/classes/MO/Hooks/LoadTextDomain.php',
         'WPML\\ST\\MO\\Hooks\\PreloadThemeMoFile' => __DIR__ . '/../..' . '/classes/MO/Hooks/PreloadThemeMoFile.php',
+        'WPML\\ST\\MO\\Hooks\\StringsLanguageChanged' => __DIR__ . '/../..' . '/classes/MO/Hooks/StringsLanguageChanged.php',
         'WPML\\ST\\MO\\JustInTime\\DefaultMO' => __DIR__ . '/../..' . '/classes/MO/JustInTime/DefaultMO.php',
         'WPML\\ST\\MO\\JustInTime\\MO' => __DIR__ . '/../..' . '/classes/MO/JustInTime/MO.php',
         'WPML\\ST\\MO\\JustInTime\\MOFactory' => __DIR__ . '/../..' . '/classes/MO/JustInTime/MOFactory.php',
@@ -61,6 +63,8 @@ class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
         'WPML\\ST\\MO\\Scan\\UI\\Model' => __DIR__ . '/../..' . '/classes/translations-file-scan/UI/Model.php',
         'WPML\\ST\\MO\\Scan\\UI\\UI' => __DIR__ . '/../..' . '/classes/translations-file-scan/UI/UI.php',
         'WPML\\ST\\MO\\WPLocaleProxy' => __DIR__ . '/../..' . '/classes/MO/WPLocaleProxy.php',
+        'WPML\\ST\\PackageTranslation\\Assign' => __DIR__ . '/../..' . '/classes/package-translation/Assign.php',
+        'WPML\\ST\\PackageTranslation\\Hooks' => __DIR__ . '/../..' . '/classes/package-translation/Hooks.php',
         'WPML\\ST\\Package\\Domains' => __DIR__ . '/../..' . '/classes/package/class-domains.php',
         'WPML\\ST\\Rest\\Base' => __DIR__ . '/../..' . '/classes/API/rest/Base.php',
         'WPML\\ST\\Rest\\FactoryLoader' => __DIR__ . '/../..' . '/classes/API/rest/FactoryLoader.php',
@@ -69,7 +73,8 @@ class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
         'WPML\\ST\\Rest\\Settings' => __DIR__ . '/../..' . '/classes/API/rest/settings/Settings.php',
         'WPML\\ST\\Shortcode' => __DIR__ . '/../..' . '/classes/Shortcode.php',
         'WPML\\ST\\Shortcode\\Hooks' => __DIR__ . '/../..' . '/classes/shortcode/Hooks.php',
-        'WPML\\ST\\Shortcode\\Xliff' => __DIR__ . '/../..' . '/classes/shortcode/Xliff.php',
+        'WPML\\ST\\Shortcode\\LensFactory' => __DIR__ . '/../..' . '/classes/shortcode/LensFactory.php',
+        'WPML\\ST\\Shortcode\\TranslationHandler' => __DIR__ . '/../..' . '/classes/shortcode/TranslationHandler.php',
         'WPML\\ST\\SlugTranslation\\Hooks\\Hooks' => __DIR__ . '/../..' . '/classes/slug-translation/RewriteRules/Hooks.php',
         'WPML\\ST\\SlugTranslation\\Hooks\\HooksFactory' => __DIR__ . '/../..' . '/classes/slug-translation/RewriteRules/HooksFactory.php',
         'WPML\\ST\\StringsFilter\\Provider' => __DIR__ . '/../..' . '/classes/filters/strings-filter/Provider.php',
@@ -301,7 +306,7 @@ class ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit4e6af1b757047b90260bf9d55af4dff5::$classMap;
+            $loader->classMap = ComposerStaticInita0f744b6b09496e229f24990c718fbee::$classMap;
 
         }, null, ClassLoader::class);
     }
