@@ -56,12 +56,13 @@ WPML_String_Translation.ChangeTranslationPriority = function () {
     };
 
     var initializeSelect2 = function () {
-        privateData.translation_priority_select.select2({
+        privateData.translation_priority_select.wpml_select2({
+
             width:              'auto',
             dropdownCss:        {'z-index': parseInt(jQuery('.ui-dialog').css('z-index'), 10) + 100},
             dropdownAutoWidth:  true
         });
-        jQuery('.js-change-translation-priority .select2-choice').addClass('button button-secondary').attr('disabled', 'true');
+        jQuery('.js-change-translation-priority .wpml_select2-choice').addClass('button button-secondary').attr('disabled', 'true');
     };
 
     init();

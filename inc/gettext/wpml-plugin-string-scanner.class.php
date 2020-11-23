@@ -6,7 +6,7 @@ class WPML_Plugin_String_Scanner extends WPML_String_Scanner implements IWPML_ST
 
 	public function scan() {
 		$plugin_file = $_POST['plugin'];
-		$this->current_plugin_file = WP_PLUGIN_DIR . '/' . $plugin_file;
+		$this->current_plugin_file = WPML_PLUGINS_DIR . '/' . $plugin_file;
 		$this->current_type = 'plugin';
 		$this->current_path = dirname( $this->current_plugin_file );
 		$this->text_domain = $this->get_plugin_text_domain();

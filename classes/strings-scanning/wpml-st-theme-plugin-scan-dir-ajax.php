@@ -87,7 +87,7 @@ class WPML_ST_Theme_Plugin_Scan_Dir_Ajax {
 			$folder[] = get_theme_root() . '/' . sanitize_text_field( $_POST['theme'] );
 		} else if ( array_key_exists( 'plugin', $_POST ) ){
 			$plugin_folder = explode( '/', $_POST['plugin'] );
-			$folder[] = WP_PLUGIN_DIR . '/' . sanitize_text_field( $plugin_folder[0] );
+			$folder[] = WPML_PLUGINS_DIR . '/' . sanitize_text_field( $plugin_folder[0] );
 		} else if ( array_key_exists( 'mu-plugin', $_POST ) ) {
 			$folder[] = WPMU_PLUGIN_DIR . '/' . sanitize_text_field( $_POST['mu-plugin'] );
 		}
