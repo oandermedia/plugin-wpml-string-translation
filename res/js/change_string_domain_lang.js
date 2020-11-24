@@ -54,7 +54,7 @@ WPML_String_Translation.ChangeDomainLanguage = function () {
 				close:         function () {
 					var languageSelector = jQuery('.js-simple-lang-selector-flags');
 					if (languageSelector) {
-						languageSelector.select2("close");
+						languageSelector.wpml_select2("close");
 					}
 				}
 			});
@@ -79,7 +79,7 @@ WPML_String_Translation.ChangeDomainLanguage = function () {
 			buildTable(languages);
 
 			domainLang = jQuery(this).find('option:selected').data('domain_lang');
-			jQuery(privateData.lang_select).select2('val', domainLang);
+			jQuery(privateData.lang_select).wpml_select2('val', domainLang);
 
 			privateData.summary_div.show();
 

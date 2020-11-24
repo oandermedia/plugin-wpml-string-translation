@@ -297,14 +297,8 @@ jQuery(function($) {
 			return text;
 		},
 
-		renderStringsCounter: function() {
-			var text = '';
-
-			text = text + this.scanSuccessfulMessage.replace('%s', this.counter.totalStrings) + '<br />';
-			text = text.split('!')[1];
-			text = text.split('.')[0];
-
-			return text;
+		renderStringsCounter: function () {
+			return 'WPML' + this.scanSuccessfulMessage.replace('%s', this.counter.totalStrings).split('WPML')[1];
 		},
 
 		restoreUI: function() {
@@ -342,7 +336,7 @@ jQuery(function($) {
 
 		selectItems: function( scanButton, group ) {
 			group.forEach(function(item){
-				$( 'input[value="' + item + '"]' ).attr( 'checked', 'checked' );
+				$( 'input[value="' + item + '"]' ).prop( 'checked', true );
 			});
 		},
 
